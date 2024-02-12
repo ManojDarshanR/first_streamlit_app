@@ -48,3 +48,8 @@ add_my_fruit = streamlit.text_input("Enter a new fruit:")
 if add_my_fruit:
     my_data_rows = my_data_rows.append({'fruit': add_my_fruit}, ignore_index=True)
 streamlit.dataframe(my_data_rows)
+
+streamlit.write('Thanks for adding ', add_my_fruit)
+
+# This will not work correctly, but just go with it for now
+my_cur.execute("insert into fruit_load_list values ('from streamlit')")
