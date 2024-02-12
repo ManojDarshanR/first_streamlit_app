@@ -45,6 +45,6 @@ streamlit.dataframe(my_data_rows)
 
 # allow the end user to add a new fruit to the table 
 add_my_fruit = streamlit.text_input("Enter a new fruit:")
-if new\_fruit:
+if add_my_fruit:
     my_data_rows = my_data_rows.append({'fruit': new\_fruit}, ignore\_index=True)
 streamlit.dataframe(my_data_rows)
